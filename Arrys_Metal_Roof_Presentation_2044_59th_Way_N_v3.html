@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Smith Residence · Tyrone Garden Manor — A Personal Proposal from Arry's Roofing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#141109;
+    --coal:#1b1710;
+    --gold:#c9a227;
+    --gold-deep:#9a7718;
+    --gold-bright:#e8c04a;
+    --gold-pale:#f3e3ae;
+    --cream:#f8f3e7;
+    --cream2:#f0e7d2;
+    --card:#fffef8;
+    --ink:#1e1a12;
+    --ink-soft:#655e4d;
+    --ivory:#f5f1e6;
+    --muted:#9b958a;
+    --bay:#1e6e7e;
+    --bay-soft:#3aa6b9;
+    --copper:#b06a3b;
+    --palm:#5f8a5d;
+    --sunset:#d96c4f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Figtree',system-ui,sans-serif;font-weight:300;line-height:1.75;overflow-x:hidden}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.4;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .03 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif}
+  section{position:relative;padding:104px 8vw;z-index:2}
+
+  .kick{display:inline-flex;align-items:center;gap:14px;margin-bottom:22px;position:relative;z-index:2;
+    font-size:10.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  .kick::before,.kick::after{content:"";width:34px;height:1.2px;background:var(--gold-deep)}
+  .dark .kick{color:var(--gold-bright)}
+  .dark .kick::before,.dark .kick::after{background:var(--gold)}
+  .h-xl{font-size:clamp(40px,5.6vw,76px);font-weight:500;line-height:1.1;position:relative;z-index:2}
+  .h-lg{font-size:clamp(31px,3.9vw,52px);font-weight:500;line-height:1.16;position:relative;z-index:2}
+  .it{font-style:italic;font-weight:400}
+  .gold{color:var(--gold-deep)}
+  .bay{color:var(--bay)}
+  .dark .gold{color:var(--gold-bright)}
+  .lede{max-width:660px;color:var(--ink-soft);font-size:16.5px;margin-top:24px;position:relative;z-index:2}
+  .lede strong{color:var(--ink);font-weight:500}
+  .dark{background:var(--black);color:var(--ivory)}
+  .dark .lede{color:var(--muted)}
+  .dark .lede strong{color:var(--ivory)}
+  .center{text-align:center}
+  .center .lede{margin-left:auto;margin-right:auto}
+
+  .rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+  .rv.on{opacity:1;transform:none}
+  .d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+
+  #prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:100;background:linear-gradient(90deg,var(--bay),var(--gold-deep),var(--gold-bright))}
+
+  #dots{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:12px}
+  #dots a{width:7px;height:7px;border-radius:50%;border:1.3px solid var(--gold-deep);display:block;transition:.3s;background:rgba(248,243,231,.7)}
+  #dots a.act{background:var(--gold);box-shadow:0 0 9px var(--gold);height:22px;border-radius:6px}
+  @media(max-width:900px){#dots{display:none}}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;
+    padding:12px 8vw;background:rgba(20,17,9,.93);backdrop-filter:blur(9px);border-bottom:1px solid rgba(201,162,39,.35)}
+  .logo{display:flex;align-items:center;gap:13px;font-family:'Fraunces',serif;font-size:21px;color:var(--ivory)}
+  .logo img{width:42px;height:42px;border-radius:7px;box-shadow:0 0 12px rgba(201,162,39,.35)}
+  .logo b{color:var(--gold-bright);font-weight:600}
+  .hdr-right{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+
+  .btn{display:inline-block;margin-top:40px;padding:17px 46px;position:relative;
+    background:var(--black);color:var(--gold-bright);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:12.5px;
+    text-decoration:none;transition:.3s;border:1.4px solid var(--gold)}
+  .btn::before{content:"";position:absolute;top:5px;left:5px;right:-5px;bottom:-5px;border:1.2px solid rgba(154,119,24,.5);z-index:-1;transition:.3s}
+  .btn:hover{transform:translate(-2px,-2px);background:var(--gold-deep);color:#fff}
+  .btn:hover::before{transform:translate(3px,3px)}
+  .btn.alt{background:transparent;color:var(--ink);border-color:var(--ink);margin-left:20px}
+  .btn.alt:hover{background:var(--black);color:var(--gold-bright)}
+  .dark .btn.alt{color:var(--ivory);border-color:var(--ivory)}
+  @media(max-width:640px){.btn.alt{margin-left:0;margin-top:16px}}
+
+  .rule{position:relative;height:1.2px;background:linear-gradient(90deg,transparent,rgba(154,119,24,.5),transparent);margin:0 8vw;z-index:2}
+  .rule::after{content:"✦";position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);color:var(--gold-deep);font-size:11px;background:var(--cream);padding:0 13px}
+
+  /* ============ HERO — personal letter ============ */
+  #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding-top:130px;
+    background:
+      radial-gradient(1000px 540px at 20% 10%, rgba(30,110,126,.1), transparent 60%),
+      radial-gradient(900px 520px at 85% 90%, rgba(201,162,39,.14), transparent 62%),
+      var(--cream)}
+  .letter{max-width:860px;background:var(--card);border:1.4px solid rgba(154,119,24,.4);
+    padding:clamp(40px,6vw,84px);position:relative;z-index:2;text-align:center;
+    box-shadow:0 30px 80px rgba(30,26,18,.22)}
+  .letter::before{content:"";position:absolute;inset:10px;border:1px solid rgba(154,119,24,.3);pointer-events:none}
+  .seal{width:86px;height:86px;border-radius:50%;margin:0 auto 26px;display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 35% 30%,#e8c04a,#9a7718);box-shadow:0 10px 28px rgba(154,119,24,.5), inset 0 -4px 10px rgba(0,0,0,.3)}
+  .seal img{width:62px;height:62px;border-radius:50%;border:2px solid rgba(20,17,9,.55)}
+  .letter .to{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  .letter h1{margin:18px 0 6px}
+  .letter .addr{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--bay)}
+  .letter .body{max-width:560px;margin:26px auto 0;color:var(--ink-soft);font-size:16px}
+  .letter .body strong{color:var(--ink);font-weight:500}
+  .sig{margin-top:30px}
+  .sig .name{font-family:'Fraunces',serif;font-style:italic;font-size:24px;color:var(--ink)}
+  .sig .role{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+  .scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:3;
+    font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--ink-soft);
+    display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scroll-cue i{display:block;width:1px;height:40px;background:linear-gradient(var(--gold-deep),transparent);animation:drop 2s infinite}
+  @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* ============ LOCAL DOSSIER ============ */
+  #local{background:linear-gradient(180deg,var(--cream),#eef0e2 50%,var(--cream))}
+  .dossier{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:10px}
+  @media(max-width:900px){.dossier{grid-template-columns:1fr}}
+  .loc-facts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px;position:relative;z-index:2}
+  @media(max-width:620px){.loc-facts{grid-template-columns:1fr}}
+  .lf{background:var(--card);border:1.3px solid rgba(154,119,24,.3);padding:24px 24px;position:relative;
+    box-shadow:0 10px 26px rgba(30,26,18,.12);transition:.35s}
+  .lf:hover{transform:translateY(-5px);border-color:var(--gold)}
+  .lf::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px}
+  .lf:nth-child(1)::before{background:var(--gold)}
+  .lf:nth-child(2)::before{background:var(--bay)}
+  .lf:nth-child(3)::before{background:var(--sunset)}
+  .lf:nth-child(4)::before{background:var(--palm)}
+  .lf b{display:block;font-family:'Fraunces',serif;font-size:24px;color:var(--ink);font-weight:500;line-height:1.25}
+  .lf span{font-size:12.5px;color:var(--ink-soft);display:block;margin-top:6px;line-height:1.65}
+  /* map */
+  .map-panel{background:linear-gradient(160deg,#182028,#10151b);border:1.4px solid rgba(58,166,185,.45);
+    padding:14px;box-shadow:0 24px 60px rgba(16,21,27,.4);position:relative;z-index:2}
+  .map-panel iframe{display:block;width:100%;height:430px;border:0;filter:saturate(.85) sepia(.08)}
+  .map-cap{text-align:center;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px}
+  .map-cap a{color:var(--bay);text-decoration:none;border-bottom:1px solid rgba(30,110,126,.4)}
+  .map-legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;justify-content:center}
+  .ml{display:inline-flex;align-items:center;gap:8px;background:rgba(20,17,9,.85);border:1px solid rgba(201,162,39,.4);
+    padding:7px 14px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale)}
+  .ml i{width:8px;height:8px;border-radius:50%;flex:none}
+
+
+  /* ============ STORM LEDGER ============ */
+  #storms{background:
+    radial-gradient(1000px 560px at 80% 10%, rgba(58,166,185,.12), transparent 62%),
+    var(--black)}
+  .ledger{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,162,39,.3);margin-top:54px;position:relative;z-index:2}
+  @media(max-width:860px){.ledger{grid-template-columns:1fr}}
+  .lg-cell{background:#191510;padding:40px 32px;transition:background .4s}
+  .lg-cell:hover{background:#201a12}
+  .lg-cell .n{font-family:'Fraunces',serif;font-size:clamp(38px,4vw,58px);font-weight:600;color:var(--gold-bright);line-height:1}
+  .lg-cell .n small{font-size:.42em;vertical-align:super}
+  .lg-cell .t{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:12px;line-height:1.9}
+  .storm-line{margin-top:60px;position:relative;z-index:2;border-left:1.4px solid rgba(201,162,39,.4);padding-left:34px}
+  .sl{padding-bottom:34px;position:relative}
+  .sl:last-child{padding-bottom:0}
+  .sl::before{content:"";position:absolute;left:-40px;top:7px;width:11px;height:11px;border-radius:50%;border:2px solid var(--gold);background:var(--black)}
+  .sl .when{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .sl h3{font-size:23px;color:var(--ivory);font-weight:500;margin:4px 0}
+  .sl p{color:var(--muted);font-size:14.5px;max-width:600px}
+  .sl p b{color:var(--gold-pale);font-weight:500}
+
+  /* photo card + strip (shared) */
+  .photo-card{position:relative;overflow:hidden;margin:0;cursor:zoom-in;background:#d9d2bd;
+    border:1.4px solid rgba(154,119,24,.5);box-shadow:0 20px 50px rgba(30,26,18,.26);transition:.4s}
+  .photo-card:hover{transform:translateY(-5px);box-shadow:0 28px 62px rgba(30,26,18,.34)}
+  .photo-card img{width:100%;min-height:300px;max-height:480px;object-fit:cover;display:block;opacity:0;transition:opacity .8s,transform .9s}
+  .photo-card img.ld{opacity:1}
+  .photo-card:hover img{transform:scale(1.05)}
+  .photo-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:32px 18px 14px;
+    background:linear-gradient(transparent,rgba(20,17,9,.9));font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale)}
+  .strip{display:flex;gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;padding:52px 4px 22px;position:relative;z-index:2;
+    scrollbar-width:thin;scrollbar-color:var(--gold-deep) transparent}
+  .strip::-webkit-scrollbar{height:8px}
+  .strip::-webkit-scrollbar-thumb{background:var(--gold-deep);border-radius:6px}
+  .strip figure{flex:0 0 330px;height:240px;scroll-snap-align:start;position:relative;margin:0;overflow:hidden;cursor:zoom-in;
+    background:#d9d2bd;border:1.3px solid rgba(154,119,24,.4);box-shadow:0 10px 26px rgba(30,26,18,.18);transition:.35s}
+  .strip figure.big{flex:0 0 460px}
+  .strip figure:hover{transform:translateY(-5px)}
+  .strip img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .8s,transform .8s}
+  .strip img.ld{opacity:1}
+  .strip figure:hover img{transform:scale(1.06)}
+  .strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 15px 11px;
+    background:linear-gradient(transparent,rgba(20,17,9,.9));font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale)}
+  .swipe-hint{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;gap:10px}
+  .swipe-hint::after{content:"⟶";color:var(--gold-deep);animation:nudge 1.8s ease-in-out infinite}
+  @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+
+  #lb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
+    background:rgba(20,17,9,.94);cursor:zoom-out;padding:5vh 5vw;backdrop-filter:blur(4px)}
+  #lb.open{display:flex}
+  #lb img{max-width:100%;max-height:82vh;border:1px solid rgba(201,162,39,.45);box-shadow:0 30px 90px rgba(0,0,0,.7)}
+  #lb figcaption{position:absolute;bottom:6vh;left:0;right:0;text-align:center;color:var(--gold-pale);font-size:12px;letter-spacing:.25em;text-transform:uppercase}
+  #lb .x{position:absolute;top:22px;right:32px;color:var(--gold-bright);font-size:36px;font-family:serif;line-height:1}
+
+  .two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+
+  /* stats row (cream) */
+  .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px;position:relative;z-index:2}
+  @media(max-width:900px){.stat-row{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.stat-row{grid-template-columns:1fr}}
+  .st{background:var(--card);border:1.3px solid rgba(154,119,24,.3);padding:34px 24px;text-align:center;transition:.35s;position:relative}
+  .st:hover{transform:translateY(-6px);border-color:var(--gold)}
+  .st::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:3px}
+  .st:nth-child(1)::after{background:var(--bay)}
+  .st:nth-child(2)::after{background:var(--gold)}
+  .st:nth-child(3)::after{background:var(--palm)}
+  .st:nth-child(4)::after{background:var(--copper)}
+  .st .num{font-family:'Fraunces',serif;font-size:clamp(38px,4vw,56px);color:var(--ink);font-weight:600;line-height:1}
+  .st .num small{font-size:.42em;vertical-align:super}
+  .st .lab{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px;line-height:1.8}
+  .fine{font-size:11px;color:#8a8272;margin-top:24px;max-width:740px;position:relative;z-index:2}
+  .dark .fine{color:#8a8478}
+
+  /* facts / craft (cream cards) */
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px;position:relative;z-index:2}
+  @media(max-width:1000px){.facts{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:620px){.facts{grid-template-columns:1fr}}
+  .fact{background:var(--card);padding:30px 26px;border:1.3px solid rgba(154,119,24,.3);border-top:4px solid var(--gold);
+    box-shadow:0 10px 26px rgba(30,26,18,.11);transition:.35s}
+  .fact:hover{transform:translateY(-6px)}
+  .fact.t-teal{border-top-color:var(--bay)}
+  .fact.t-copper{border-top-color:var(--copper)}
+  .fact.t-palm{border-top-color:var(--palm)}
+  .fact h3{font-size:21px;font-weight:600;color:var(--ink);margin-bottom:8px}
+  .fact p{color:var(--ink-soft);font-size:13.5px}
+  .myth{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(101,94,77,.3);font-size:12px;color:#7c745f}
+  .myth b{color:var(--gold-deep);font-weight:600}
+
+  table{width:100%;border-collapse:separate;border-spacing:0;margin-top:52px;position:relative;z-index:2;
+    background:var(--card);overflow:hidden;box-shadow:0 14px 38px rgba(30,26,18,.14);border:1.3px solid rgba(154,119,24,.35)}
+  th,td{padding:18px 22px;text-align:left;font-size:14.5px;border-bottom:1px solid rgba(154,119,24,.16)}
+  thead th{background:var(--black);color:var(--muted);font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;border-bottom:none}
+  thead th.col-metal{color:var(--gold-bright)}
+  td:first-child{color:var(--ink-soft)}
+  tbody tr:hover{background:rgba(201,162,39,.08)}
+  tbody tr:last-child td{border-bottom:none}
+  .col-metal{color:var(--gold-deep);font-weight:600}
+
+  /* value */
+  .chips{display:flex;gap:16px;flex-wrap:wrap;margin-top:42px;position:relative;z-index:2}
+  .chip{background:var(--card);padding:20px 24px;flex:1;min-width:200px;border:1.3px solid rgba(154,119,24,.3);
+    border-left:5px solid var(--gold);box-shadow:0 10px 24px rgba(30,26,18,.11);transition:.35s}
+  .chip:hover{transform:translateY(-5px)}
+  .chip:nth-child(2){border-left-color:var(--bay)}
+  .chip:nth-child(3){border-left-color:var(--palm)}
+  .chip .big{font-family:'Fraunces',serif;font-size:34px;font-weight:600;color:var(--ink);line-height:1.1}
+  .chip .big em{font-style:normal;color:var(--gold-deep)}
+  .chip .sm{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;line-height:1.7}
+  .art-panel{background:linear-gradient(160deg,#1d1912,#141109);padding:22px;border:1.4px solid rgba(201,162,39,.4);
+    box-shadow:0 22px 54px rgba(30,26,18,.3)}
+
+  /* legacy + ribbon */
+  .legacy-rows{margin-top:52px;position:relative;z-index:2}
+  .lr{display:grid;grid-template-columns:60px 1fr 1.6fr;gap:26px;align-items:baseline;padding:24px 0;border-bottom:1px solid rgba(201,162,39,.25)}
+  @media(max-width:760px){.lr{grid-template-columns:1fr;gap:6px}}
+  .lr:last-child{border-bottom:none}
+  .lr .yr{font-family:'Fraunces',serif;font-style:italic;font-size:21px;color:var(--gold-bright)}
+  .lr h3{font-size:22px;font-weight:500;color:var(--ivory)}
+  .lr p{color:var(--muted);font-size:14px}
+  .ribbon{background:var(--black);border-top:1.2px solid rgba(201,162,39,.4);border-bottom:1.2px solid rgba(201,162,39,.4);
+    overflow:hidden;padding:14px 0;position:relative;z-index:2}
+  .ribbon .track{display:flex;gap:50px;white-space:nowrap;width:max-content;animation:slide 28s linear infinite}
+  .ribbon span{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-bright);display:flex;align-items:center;gap:50px}
+  .ribbon span::after{content:"✦";font-size:9px;color:var(--gold-deep)}
+  @keyframes slide{to{transform:translateX(-50%)}}
+
+  /* pledges — three-column, golden featured center */
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:60px;align-items:stretch;position:relative;z-index:2}
+  @media(max-width:960px){.tiers{grid-template-columns:1fr;max-width:520px}}
+  .tier{background:var(--card);padding:42px 32px 32px;position:relative;display:flex;flex-direction:column;
+    border:1.3px solid rgba(154,119,24,.35);box-shadow:0 14px 36px rgba(30,26,18,.14);transition:transform .35s,box-shadow .35s}
+  .tier:hover{transform:translateY(-8px);box-shadow:0 26px 54px rgba(30,26,18,.22)}
+  .tier .medal{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .tier h3{font-size:26px;font-weight:600;color:var(--ink);line-height:1.15}
+  .tier .sub{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;margin:6px 0 18px;font-weight:600}
+  .tier ul{list-style:none;flex:1}
+  .tier li{padding:9px 0 9px 28px;position:relative;font-size:13.5px;color:var(--ink-soft);border-bottom:1px dashed rgba(101,94,77,.22)}
+  .tier li:last-child{border-bottom:none}
+  .tier li::before{content:"✦";position:absolute;left:2px;top:9px;font-size:12px}
+  .tier.base .medal{background:rgba(101,94,77,.12);color:#7c745f}
+  .tier.base .sub{color:#7c745f}
+  .tier.base li::before{color:#a39b85}
+  .tier.silver .medal{background:linear-gradient(135deg,#e8e8e6,#b9bcc0);color:#5b6066;box-shadow:0 4px 12px rgba(90,96,102,.35)}
+  .tier.silver .sub{color:#6b7076}
+  .tier.silver li::before{color:#9aa0a6}
+  .tier.silver{border-color:rgba(107,112,118,.45)}
+  .tier.golden{background:linear-gradient(165deg,#1d1912,#141109);color:var(--ivory);
+    border:1.6px solid var(--gold);box-shadow:0 22px 58px rgba(154,119,24,.35);transform:scale(1.04)}
+  .tier.golden:hover{transform:scale(1.04) translateY(-8px)}
+  .tier.golden h3{color:var(--gold-bright)}
+  .tier.golden .sub{color:var(--gold)}
+  .tier.golden li{color:#c9c3b4;border-bottom-color:rgba(201,162,39,.2)}
+  .tier.golden li::before{color:var(--gold-bright)}
+  .tier.golden .medal{background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:#171410;box-shadow:0 6px 18px rgba(201,162,39,.5)}
+  .tier .flag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);white-space:nowrap;
+    background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:#171410;
+    font-size:9.5px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+    padding:7px 20px;border-radius:20px;box-shadow:0 6px 16px rgba(201,162,39,.45)}
+
+  /* fortified */
+  .rare-flag{display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;position:relative;z-index:2;
+    background:var(--black);color:var(--gold-bright);padding:8px 20px;font-size:9.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+    box-shadow:0 8px 20px rgba(30,26,18,.3)}
+  .fort-band{margin-top:52px;background:linear-gradient(150deg,#1d1912,#141109);border:1.5px solid var(--gold);
+    padding:40px 36px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;box-shadow:0 22px 54px rgba(30,26,18,.28);position:relative;z-index:2}
+  @media(max-width:860px){.fort-band{grid-template-columns:1fr}}
+  .fb{text-align:center;border-left:1px solid rgba(201,162,39,.3);padding:0 12px}
+  .fb:first-child{border-left:none}
+  @media(max-width:860px){.fb{border-left:none;border-top:1px solid rgba(201,162,39,.3);padding:20px 0 0}.fb:first-child{border-top:none;padding-top:0}}
+  .fb .n{font-family:'Fraunces',serif;font-size:clamp(36px,3.8vw,54px);font-weight:600;color:var(--gold-bright);line-height:1}
+  .fb .n small{font-size:.42em;vertical-align:super}
+  .fb .t{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:11px;line-height:1.9}
+  .fort-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;margin-top:58px;align-items:start;position:relative;z-index:2}
+  @media(max-width:900px){.fort-cols{grid-template-columns:1fr}}
+  .fort-how{list-style:none}
+  .fort-how li{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed rgba(101,94,77,.28);font-size:14.5px;color:var(--ink-soft)}
+  .fort-how li:last-child{border-bottom:none}
+  .fort-how li b{color:var(--ink);font-weight:600}
+  .fort-how .fn{flex:none;font-family:'Fraunces',serif;font-style:italic;color:var(--gold-deep);font-size:17px;width:23px}
+  .fort-edge{background:var(--card);border:1.5px solid var(--gold);padding:32px 30px;box-shadow:0 14px 38px rgba(30,26,18,.14)}
+  .fort-edge h3{font-size:25px;color:var(--gold-deep);font-weight:600;margin-bottom:12px}
+  .fort-edge p{font-size:14px;color:var(--ink-soft);margin-bottom:11px}
+  .fort-edge p b{color:var(--ink);font-weight:600}
+
+  /* solar — sunshine city */
+  #solar{background:
+    radial-gradient(900px 500px at 82% 8%, rgba(232,192,74,.3), transparent 60%),
+    radial-gradient(700px 400px at 6% 92%, rgba(30,110,126,.12), transparent 65%),
+    linear-gradient(180deg,var(--cream),#f5ead0 55%,var(--cream))}
+  .sun-badge{display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;position:relative;z-index:2;
+    background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:#141109;padding:8px 19px;
+    font-size:9.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;box-shadow:0 8px 22px rgba(201,162,39,.4)}
+  .sun-list{margin-top:32px;position:relative;z-index:2;list-style:none}
+  .sun-list li{display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed rgba(101,94,77,.25);font-size:14.5px;color:var(--ink-soft)}
+  .sun-list li:last-child{border-bottom:none}
+  .sun-list li b{color:var(--ink);font-weight:600}
+  .sun-list .dot{flex:none;width:28px;height:28px;margin-top:2px;display:flex;align-items:center;justify-content:center;
+    background:rgba(201,162,39,.18);color:var(--gold-deep);font-size:12px}
+  .solar-imgs{display:grid;gap:16px}
+  .solar-imgs .photo-card img{min-height:210px;max-height:280px}
+  .solar-strip{margin-top:56px;background:linear-gradient(135deg,#1d1912,#141109);border:1.4px solid var(--gold);
+    padding:30px 36px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;box-shadow:0 18px 46px rgba(30,26,18,.28);position:relative;z-index:2}
+  .solar-strip p{flex:1;min-width:260px;color:#c9c3b4;font-size:14.5px}
+  .solar-strip p b{color:var(--gold-bright);font-weight:600}
+  .solar-strip .mini-btn{flex:none;padding:13px 30px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:#141109;
+    font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;transition:.3s}
+  .solar-strip .mini-btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(232,192,74,.45)}
+
+  /* process + faq */
+  .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px;position:relative;z-index:2}
+  @media(max-width:960px){.steps-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:620px){.steps-grid{grid-template-columns:1fr}}
+  .sg{background:var(--card);padding:30px 24px;border:1.3px solid rgba(154,119,24,.3);border-top:4px solid var(--gold);
+    box-shadow:0 10px 24px rgba(30,26,18,.11);transition:.35s;position:relative}
+  .sg:hover{transform:translateY(-6px)}
+  .sg .n{position:absolute;top:-15px;left:20px;width:32px;height:32px;border-radius:50%;background:var(--black);color:var(--gold-bright);
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-style:italic;font-size:15px;box-shadow:0 5px 12px rgba(30,26,18,.35)}
+  .sg h3{font-size:20px;font-weight:600;color:var(--ink);margin:6px 0 6px}
+  .sg p{color:var(--ink-soft);font-size:13.5px}
+  .faq{margin-top:80px;max-width:780px;position:relative;z-index:2}
+  .faq h3.faq-title{font-size:30px;color:var(--ink);font-weight:600;margin-bottom:22px}
+  .faq details{background:var(--card);margin-bottom:11px;border:1.3px solid rgba(154,119,24,.3);box-shadow:0 8px 18px rgba(30,26,18,.09);overflow:hidden}
+  .faq details[open]{border-color:var(--gold)}
+  .faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:500;font-size:15px;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:'Fraunces',serif;font-size:24px;color:var(--gold-deep);transition:transform .3s;line-height:1}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq .a{padding:0 22px 19px;color:var(--ink-soft);font-size:14px}
+
+  /* CTA */
+  #cta{min-height:84vh;display:flex;flex-direction:column;justify-content:center;text-align:center;overflow:hidden;
+    background:
+      radial-gradient(700px 420px at 50% 60%,rgba(201,162,39,.2),transparent 70%),
+      radial-gradient(560px 340px at 10% 15%,rgba(30,110,126,.16),transparent 70%),
+      var(--black)}
+  #cta .inner{position:relative;z-index:2;max-width:780px;margin:auto}
+  #cta .logo-mark{width:82px;height:82px;border-radius:14px;margin:0 auto 26px;display:block;
+    box-shadow:0 0 32px rgba(201,162,39,.45);border:1px solid rgba(232,192,74,.4)}
+  footer{padding:36px 8vw;background:#0f0d07;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+    font-size:11.5px;color:#8a8478;position:relative;z-index:2;border-top:1.4px solid rgba(201,162,39,.35)}
+  footer .fl{display:flex;align-items:center;gap:13px}
+  footer img{width:34px;height:34px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<header>
+  <div class="logo">
+    <img src="arrys_logo.jpg" alt="Arry's Roofing logo">
+    <span><b>ARRY'S</b>&nbsp;ROOFING</span>
+  </div>
+  <div class="hdr-right">The Smith Residence · Tyrone Garden Manor</div>
+</header>
+
+<nav id="dots">
+  <a href="#hero"></a><a href="#local"></a><a href="#storms"></a><a href="#answer"></a>
+  <a href="#work"></a><a href="#details"></a><a href="#compare"></a><a href="#value"></a>
+  <a href="#legacy"></a><a href="#pledge"></a><a href="#fortified"></a><a href="#solar"></a>
+  <a href="#process"></a><a href="#cta"></a>
+</nav>
+
+<!-- ============ 1 · HERO — a personal letter ============ -->
+<section id="hero">
+  <div class="letter rv">
+    <div class="seal rv d1"><img src="arrys_logo.jpg" alt="Arry's gold A seal"></div>
+    <div class="to">A personal proposal · Prepared for</div>
+    <h1 class="h-xl">Mr. &amp; Mrs. Smith</h1>
+    <div class="addr">2044 59th Way N · Tyrone Garden Manor · St. Petersburg, Florida</div>
+    <p class="body rv d2">Your home has stood in this neighborhood since the early 1960s. It has outlasted dozens of storm seasons, a few paint colors, and at least a couple of roofs. We'd like to build it the roof that <strong>never has to be replaced again</strong> — a standing-seam metal roof, measured to your home, built by our own crews, and backed by the strongest warranties in the industry.</p>
+    <div class="sig rv d3">
+      <div class="name">— The Housh Family &amp; the Arry's Team</div>
+      <div class="role">Family roofers of Tampa Bay since 1990</div>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll<i></i></div>
+</section>
+
+<!-- ============ 2 · YOUR CORNER OF THE SUNSHINE CITY ============ -->
+<section id="local">
+  <div class="kick rv">Chapter One · Where you live</div>
+  <h2 class="h-lg rv d1">Your corner of the <span class="it gold">Sunshine City</span><br>is a very specific place to own a roof.</h2>
+  <div class="dossier">
+    <div>
+      <p class="lede rv d2">Tyrone Garden Manor sits on St. Pete's west side — <strong>about five miles from the open Gulf</strong>, close enough that salt air works on ordinary roofing materials year-round, and squarely in the path of everything the Gulf sends ashore. The homes here are the sturdy concrete-block residences of the early '60s: built to last, and worth protecting with a roof of the same character.</p>
+      <p class="lede rv d3">At the same time, this is one of the sunniest places in America — St. Petersburg holds the world record for consecutive days of sunshine, <strong>768 days straight</strong>. That sun fades and bakes ordinary shingles… and it's also free energy standing over your head, every day.</p>
+      <div class="loc-facts">
+        <div class="lf rv d1"><b>Tyrone Garden Manor</b><span>Your neighborhood — block-built early-'60s homes on the west side, minutes from Tyrone Square</span></div>
+        <div class="lf rv d2"><b>≈5 miles</b><span>From the open Gulf — a salt-air zone where coastal-grade aluminum &amp; coatings matter</span></div>
+        <div class="lf rv d2"><b>768 days</b><span>World-record consecutive sunshine in St. Pete — brutal on shingles, perfect for solar</span></div>
+        <div class="lf rv d3"><b>~20 miles</b><span>To our Tarpon Springs shop — your roofer is a neighbor, not a storm-chaser from out of state</span></div>
+      </div>
+    </div>
+    <div class="rv d2">
+      <div class="map-panel">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-82.8050%2C27.7480%2C-82.6250%2C27.8330&amp;layer=mapnik&amp;marker=27.790486%2C-82.714164"
+          title="Map of 2044 59th Way N, St. Petersburg, FL"
+          loading="lazy"></iframe>
+        <div class="map-legend">
+          <span class="ml"><i style="background:#e8c04a"></i>The Smith Residence · 2044 59th Way N</span>
+          <span class="ml"><i style="background:#3aa6b9"></i>Gulf beaches ≈5 mi west</span>
+          <span class="ml"><i style="background:#c9a227"></i>Arry's HQ ≈20 mi north in Tarpon Springs</span>
+        </div>
+      </div>
+      <div class="map-cap">Live map · <a href="https://www.openstreetmap.org/?mlat=27.790486&amp;mlon=-82.714164#map=13/27.7905/-82.7142" target="_blank" rel="noopener">view larger on OpenStreetMap</a> · © OpenStreetMap contributors</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · STORM LEDGER ============ -->
+<section id="storms" class="dark">
+  <div class="kick rv">Chapter Two · What 2024 taught this county</div>
+  <h2 class="h-lg rv d1">Helene and Milton weren't warnings.<br><span class="gold">They were receipts.</span></h2>
+  <p class="lede rv d2">In the span of thirteen days in 2024, two hurricanes brushed and battered Pinellas County. Your neighborhood came through — but the county's ledger tells you exactly where homes fail: <strong>the roof goes first, and everything under it follows.</strong></p>
+  <div class="ledger">
+    <div class="lg-cell rv"><div class="n" data-count="40910">0</div><div class="t">Pinellas County homes damaged across Helene &amp; Milton combined</div></div>
+    <div class="lg-cell rv d1"><div class="n" data-count="70">0<small>%</small></div><div class="t">Of the county lost power as Milton moved through</div></div>
+    <div class="lg-cell rv d2"><div class="n" data-count="714">0</div><div class="t">Homes destroyed outright between the two storms</div></div>
+  </div>
+  <div class="storm-line rv d2">
+    <div class="sl"><div class="when">September 26, 2024</div><h3>Hurricane Helene</h3><p>Passing far offshore, Helene still damaged <b>28,350 Pinellas homes</b> — proof that this county doesn't need a direct hit to suffer.</p></div>
+    <div class="sl"><div class="when">October 9, 2024 · 13 days later</div><h3>Hurricane Milton</h3><p>Milton damaged <b>12,560 more homes</b> — and tore the roof off Tropicana Field, eight miles from your front door. When a stadium roof fails, it's the same lesson as a shingle roof: <b>wind finds the weak layer.</b></p></div>
+    <div class="sl"><div class="when">Every June — November</div><h3>The next one</h3><p>Nobody can schedule it. You can only decide, in advance, what it finds when it arrives at 59th Way N: <b>aging shingles, or a standing-seam metal system rated beyond Cat 5 winds.</b></p></div>
+  </div>
+  <p class="fine rv d3">Damage figures from Pinellas County post-storm assessments as reported by WFLA and county officials; Tropicana Field damage reported by the City of St. Petersburg.</p>
+</section>
+
+<!-- ============ 4 · THE ANSWER (numbers) ============ -->
+<section id="answer">
+  <div class="kick rv">Chapter Three · The answer over your head</div>
+  <h2 class="h-lg rv d1">One decision protects the house.<br><span class="it gold">Here's what it's worth.</span></h2>
+  <div class="stat-row">
+    <div class="st rv"><div class="num" data-count="180"><small>up to </small>0<small> mph</small></div><div class="lab">Wind rating — beyond Cat 5 hurricane force</div></div>
+    <div class="st rv d1"><div class="num" data-count="50">0<small>+ yrs</small></div><div class="lab">Lifespan vs. 15–20 for shingles in Florida sun</div></div>
+    <div class="st rv d2"><div class="num" data-count="35"><small>up to </small>0<small>%</small></div><div class="lab">Insurance credit with a wind-mitigation inspection</div></div>
+    <div class="st rv d3"><div class="num" data-count="25"><small>up to </small>0<small>%</small></div><div class="lab">Lower cooling costs — reflected Florida heat</div></div>
+  </div>
+  <p class="fine rv d2">Insurance credits documented on Florida's OIR-B1-1802 wind-mitigation form; many Tampa Bay homeowners see 15–35% premium reductions with a wind-rated metal system. We handle the paperwork with you — it matters more than ever after 2024 reshaped Pinellas insurance.</p>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ 5 · THE WORK ============ -->
+<section id="work">
+  <div class="kick rv">Chapter Four · Proof, not promises</div>
+  <h2 class="h-lg rv d1">Rooflines we've built<br><span class="it gold">within a short drive of yours.</span></h2>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+    <p class="lede rv d2">Every roof here was measured, formed, and installed by Arry's own crews on Tampa Bay homes — the same hands we'd send to Tyrone Garden Manor. <strong>Click any photo to enlarge.</strong></p>
+    <div class="swipe-hint rv d2">Swipe to browse</div>
+  </div>
+  <div class="strip rv d2">
+    <figure class="big"><img src="https://arrysroofing.com/wp-content/uploads/2024/09/Metal1-1.jpg" alt="Standing-seam metal roof by Arry's Roofing" loading="lazy"><figcaption>Standing-seam · Tampa Bay</figcaption></figure>
+    <figure><img src="https://arrysroofing.com/wp-content/uploads/2024/09/404Bay1.jpg" alt="Waterfront metal roof by Arry's Roofing" loading="lazy"><figcaption>Coastal install</figcaption></figure>
+    <figure><img src="https://arrysroofing.com/wp-content/uploads/2024/09/Giebner2.jpg" alt="Residential metal roof by Arry's Roofing" loading="lazy"><figcaption>Residential re-roof</figcaption></figure>
+    <figure class="big"><img src="https://arrysroofing.com/wp-content/uploads/2024/09/Rowland1.jpg" alt="Metal roof craftsmanship by Arry's Roofing" loading="lazy"><figcaption>Precision seam work</figcaption></figure>
+    <figure><img src="https://arrysroofing.com/wp-content/uploads/2024/09/Sanchez1.jpg" alt="Metal roof installation by Arry's Roofing" loading="lazy"><figcaption>Full replacement</figcaption></figure>
+    <figure><img src="https://arrysroofing.com/wp-content/uploads/2024/09/Bishop1.jpg" alt="Metal roofing project by Arry's Roofing" loading="lazy"><figcaption>Custom profile</figcaption></figure>
+    <figure><img src="https://arrysroofing.com/wp-content/uploads/2024/09/Jauch1.jpg" alt="Finished metal roof by Arry's Roofing" loading="lazy"><figcaption>Finished roofline</figcaption></figure>
+    <figure><img src="https://arrysroofing.com/wp-content/uploads/2024/09/Mitzel1.jpg" alt="Metal roof detail by Arry's Roofing" loading="lazy"><figcaption>Detail &amp; trim</figcaption></figure>
+    <figure class="big"><img src="https://arrysroofing.com/wp-content/uploads/2024/09/Metal3.jpg" alt="Completed metal roof by Arry's Roofing" loading="lazy"><figcaption>Completed project</figcaption></figure>
+    <figure><img src="https://arrysroofing.com/wp-content/uploads/2024/09/King3.jpg" alt="Metal roof by Arry's Roofing crew" loading="lazy"><figcaption>Arry's crew work</figcaption></figure>
+  </div>
+  <p class="fine rv d3">Photography from our own projects — full portfolio at <a href="https://arrysroofing.com/project-gallery/metal/" target="_blank" rel="noopener" style="color:var(--bay)">arrysroofing.com/project-gallery/metal</a></p>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ 6 · KNOW YOUR METAL (local spin) ============ -->
+<section id="details">
+  <div class="kick rv">Chapter Five · Specified for this coast</div>
+  <h2 class="h-lg rv d1">Five miles from salt water,<br><span class="it gold">the details are everything.</span></h2>
+  <p class="lede rv d2">A metal roof in Kansas and a metal roof in west St. Pete are not the same roof. Yours gets specified for <strong>this coast</strong> — the alloy, the coating, the fastening system.</p>
+  <div class="facts">
+    <div class="fact t-teal rv">
+      <h3>Coastal-grade alloys</h3>
+      <p>At ≈5 miles from the Gulf, salt air matters. We spec aluminum or coated Galvalume® steel engineered to resist coastal corrosion for decades.</p>
+      <div class="myth"><b>MYTH:</b> "Metal rusts." Modern alloys and coatings are warrantied against it.</div>
+    </div>
+    <div class="fact t-copper rv d1">
+      <h3>Kynar 500® finish</h3>
+      <p>Factory-baked PVDF coatings shrug off record-setting St. Pete UV — the color you choose is the color you keep.</p>
+      <div class="myth"><b>FACT:</b> Reflective pigments bounce heat before it enters your attic.</div>
+    </div>
+    <div class="fact t-palm rv d2">
+      <h3>Quiet &amp; green</h3>
+      <p>Over solid decking and underlayment, metal is no louder in a summer downpour than shingles — and it's 100% recyclable.</p>
+      <div class="myth"><b>MYTH:</b> "Metal is noisy." That's barn roofs, not homes.</div>
+    </div>
+    <div class="fact rv d3">
+      <h3>Warrantied for life</h3>
+      <p>Premium finish warranties up to lifetime — backed by Arry's workmanship warranty and partners like Classic Metal Roofing Systems.</p>
+      <div class="myth"><b>FACT:</b> Metal is Class A fire-rated and doesn't attract lightning.</div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ 7 · COMPARE ============ -->
+<section id="compare">
+  <div class="kick rv">Chapter Six · Side by side</div>
+  <h2 class="h-lg rv d1">Do the math once.<br><span class="it gold">Enjoy it for fifty years.</span></h2>
+  <table class="rv d2">
+    <thead><tr><th></th><th class="col-metal">Standing-Seam Metal</th><th>Asphalt Shingles</th></tr></thead>
+    <tbody>
+      <tr><td>Lifespan in Florida</td><td class="col-metal">50+ years</td><td>15–20 years</td></tr>
+      <tr><td>Wind resistance</td><td class="col-metal">Up to 180 mph</td><td>~110–130 mph</td></tr>
+      <tr><td>Insurance credits</td><td class="col-metal">✦ Strong wind-mitigation credits</td><td>Limited</td></tr>
+      <tr><td>Energy efficiency</td><td class="col-metal">Reflects heat — up to 25% cooling savings</td><td>Absorbs heat</td></tr>
+      <tr><td>Fire / rot / pests</td><td class="col-metal">Non-combustible, immune</td><td>Vulnerable over time</td></tr>
+      <tr><td>Resale value</td><td class="col-metal">Premium curb appeal &amp; buyer confidence</td><td>Depreciates with age</td></tr>
+      <tr><td>Roofs bought in a lifetime</td><td class="col-metal">Likely one</td><td>Two to four</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ 8 · VALUE ============ -->
+<section id="value">
+  <div class="two-col">
+    <div>
+      <div class="kick rv">Chapter Seven · Your street's numbers</div>
+      <h2 class="h-lg rv d1">59th Way N is appreciating.<br><span class="it gold">Your roof should keep up.</span></h2>
+      <p class="lede rv d2">We looked at <strong>your street, not a state average</strong>. Neighboring homes on 59th Way N carry estimated values of roughly <strong>$378,000–$435,000</strong> today. One comparable home on your street sold for $190,000 in late 2015 and is estimated near $435,000 now — <strong>more than double in a decade</strong> — with Pinellas projected to keep appreciating 3–5% a year.</p>
+      <p class="lede rv d3">And after 2024, every buyer and insurer in this county asks about the roof first. A 50-year metal roof with a <strong>transferable warranty</strong> isn't just protection — it's the headline feature of a future listing.</p>
+    </div>
+    <div class="rv d2">
+      <div class="art-panel">
+        <svg viewBox="0 0 700 320" fill="none" aria-hidden="true" style="width:100%;height:auto">
+          <defs>
+            <linearGradient id="vline" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9a227"/><stop offset="1" stop-color="#e8c04a"/></linearGradient>
+            <linearGradient id="vfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9a227" stop-opacity=".28"/><stop offset="1" stop-color="#c9a227" stop-opacity="0"/></linearGradient>
+          </defs>
+          <g stroke="#2c2820" stroke-width="1"><path d="M60 40 H640 M60 95 H640 M60 150 H640 M60 205 H640 M60 260 H640"/></g>
+          <g fill="#8a8478" font-family="Figtree, sans-serif" font-size="11">
+            <text x="52" y="264" text-anchor="end">$150K</text><text x="52" y="209" text-anchor="end">$225K</text>
+            <text x="52" y="154" text-anchor="end">$300K</text><text x="52" y="99" text-anchor="end">$375K</text><text x="52" y="44" text-anchor="end">$450K</text>
+            <text x="60" y="290">2015</text><text x="271" y="290" text-anchor="middle">2019</text>
+            <text x="482" y="290" text-anchor="middle">2023</text><text x="640" y="290" text-anchor="end">2026</text>
+          </g>
+          <path d="M60 231 L166 201 L271 179 L376 135 L482 84 L587 62 L640 51 L640 260 L60 260 Z" fill="url(#vfill)"/>
+          <path d="M60 231 L166 201 L271 179 L376 135 L482 84 L587 62 L640 51" stroke="url(#vline)" stroke-width="3" stroke-linecap="round"/>
+          <g fill="#e8c04a" stroke="#171410" stroke-width="2"><circle cx="60" cy="231" r="5.5"/><circle cx="376" cy="135" r="5.5"/><circle cx="640" cy="51" r="6.5"/></g>
+          <g font-family="Figtree, sans-serif" font-size="11.5" fill="#f3e3ae">
+            <text x="72" y="224">$190K · sold 2015</text>
+            <text x="638" y="34" text-anchor="end" font-size="13" font-weight="600">≈$435K today</text>
+          </g>
+          <text x="350" y="312" text-anchor="middle" fill="#9b958a" font-family="Figtree, sans-serif" font-size="10.5" letter-spacing="2.5">COMPARABLE HOME VALUE ON 59TH WAY N · 2015–2026</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="chips">
+    <div class="chip rv d1"><div class="big">$378–435<em>K</em></div><div class="sm">Estimated values of neighboring homes today</div></div>
+    <div class="chip rv d2"><div class="big">≈2.3<em>×</em></div><div class="sm">Value growth of a comparable home on your street since 2015</div></div>
+    <div class="chip rv d3"><div class="big">3–5<em>%</em></div><div class="sm">Projected annual appreciation across Pinellas County</div></div>
+  </div>
+  <p class="fine rv d3">Neighborhood figures from public listing estimates (Zillow, Redfin, county market data), July 2026. Estimates are for nearby comparable homes, not an appraisal of 2044 59th Way N.</p>
+</section>
+
+<!-- ============ 9 · LEGACY ============ -->
+<section id="legacy" class="dark">
+  <div class="kick rv">Chapter Eight · Who you're trusting</div>
+  <h2 class="h-lg rv d1">Your roofer should be a neighbor.<br><span class="gold">Ours is 20 miles up the road.</span></h2>
+  <p class="lede rv d2">After every big storm, out-of-state crews flood Pinellas driveways and vanish by spring. Arry's has answered the phone at the same Tarpon Springs shop <strong>since 1990</strong>. Arry and Becky Housh built this company on one rule: treat every roof like it's our own.</p>
+  <div class="legacy-rows">
+    <div class="lr rv d1"><div class="yr">1990</div><h3>One family, one rule</h3><p>Founded in Tarpon Springs and still family-owned and operated. We'll be here when your warranty matters.</p></div>
+    <div class="lr rv d2"><div class="yr">Always</div><h3>No subcontractors. Ever.</h3><p>Every installer on your property is a full-time, trained Arry's craftsman — 75 of them, accountable to our name.</p></div>
+    <div class="lr rv d3"><div class="yr">Today</div><h3>Elite certifications</h3><p>GAF Master Elite® — held by only a small fraction of American roofers — plus full Florida licensing.</p></div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true">
+  <div class="track">
+    <span>Est. 1990</span><span>Tarpon Springs · 20 Miles from Your Door</span><span>GAF Master Elite®</span><span>No Subcontractors</span><span>75 Full-Time Craftsmen</span><span>The Platinum Roofing Company of Tampa Bay</span>
+    <span>Est. 1990</span><span>Tarpon Springs · 20 Miles from Your Door</span><span>GAF Master Elite®</span><span>No Subcontractors</span><span>75 Full-Time Craftsmen</span><span>The Platinum Roofing Company of Tampa Bay</span>
+  </div>
+</div>
+
+<!-- ============ 10 · PLEDGES ============ -->
+<section id="pledge">
+  <div class="kick rv">Chapter Nine · Put it in writing</div>
+  <h2 class="h-lg rv d1">Warranties with <span class="it gold">real teeth.</span></h2>
+  <p class="lede rv d2">Because Arry's is a <strong>GAF Master Elite® contractor</strong>, we can offer protection most roofers can't — up to the strongest warranty in roofing.</p>
+  <div class="tiers">
+    <div class="tier base rv d1">
+      <div class="medal"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M13 2 L22 6 V12 C22 18 18.2 22.4 13 24 C7.8 22.4 4 18 4 12 V6 Z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+      <h3>System Plus<span style="font-size:.55em;vertical-align:super">®</span></h3>
+      <div class="sub">Limited Warranty · The strong start</div>
+      <ul>
+        <li>Coverage for manufacturer material defects — up to 50 years on qualifying systems</li>
+        <li>SmartChoice® Protection Period: 100% replacement materials <em>and</em> labor in the critical early years</li>
+        <li>Backed by GAF, North America's largest roofing manufacturer</li>
+        <li>Paired with Arry's own workmanship warranty</li>
+      </ul>
+    </div>
+    <div class="tier golden rv">
+      <div class="flag">Strongest in roofing</div>
+      <div class="medal"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><path d="M13 2 L16.2 9.4 L24 10.2 L18.2 15.6 L19.9 23.5 L13 19.4 L6.1 23.5 L7.8 15.6 L2 10.2 L9.8 9.4 Z" fill="currentColor"/></svg></div>
+      <h3>Golden Pledge<span style="font-size:.55em;vertical-align:super">®</span></h3>
+      <div class="sub">Limited Warranty · The gold standard</div>
+      <ul>
+        <li>Material defect coverage up to 50 years — non-prorated in the early decades</li>
+        <li>GAF stands behind our <em>workmanship</em> for up to 20 years — not just the materials</li>
+        <li>Independent GAF inspection of your finished roof, so quality is verified by a third party</li>
+        <li>Transferable once to a new owner — a real selling point for your home</li>
+        <li>Available <em>only</em> through Master Elite® contractors like Arry's</li>
+      </ul>
+    </div>
+    <div class="tier silver rv d1">
+      <div class="medal"><svg width="24" height="24" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="10" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M9 15.5 L7 24 L13 20.8 L19 24 L17 15.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg></div>
+      <h3>Silver Pledge<span style="font-size:.55em;vertical-align:super">™</span></h3>
+      <div class="sub">Limited Warranty · The smart middle</div>
+      <ul>
+        <li>Everything in System Plus® — material defect coverage plus SmartChoice® protection</li>
+        <li>Adds 10 years of GAF-backed workmanship coverage</li>
+        <li>Excellent value between the entry and flagship tiers</li>
+        <li>Also exclusive to GAF factory-certified contractors</li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine rv d3">And on every job — metal included — Arry's backs the work with a workmanship warranty of up to 20 years, plus manufacturer finish warranties on premium metal systems. See each limited warranty for coverage and restrictions; we'll price your options in your free proposal.</p>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ 11 · FORTIFIED ============ -->
+<section id="fortified">
+  <div class="rare-flag rv">✦&nbsp; Rare in Florida · Arry's exclusive edge</div>
+  <div class="kick rv" style="display:flex">Chapter Ten · The FORTIFIED Roof™</div>
+  <h2 class="h-lg rv d1">After 2024, "code" isn't enough.<br><span class="it gold">Be one of Florida's first FORTIFIED homes.</span></h2>
+  <p class="lede rv d2">FORTIFIED is the <strong>beyond-building-code</strong> standard from IBHS — the insurance industry's own storm research institute. Over 100,000 homes nationwide carry it, yet <strong>only a couple dozen in all of Florida</strong> do. In the county that just absorbed Helene and Milton, that certificate would make the Smith residence provably different from every roof around it.</p>
+  <div class="fort-band rv d2">
+    <div class="fb"><div class="n">73<small>%</small></div><div class="t">Fewer insurance claims for FORTIFIED Roof homes in Hurricane Sally — peer-reviewed 2025 study</div></div>
+    <div class="fb"><div class="n">≈7<small>%</small></div><div class="t">Higher resale value for FORTIFIED homes — University of Alabama study</div></div>
+    <div class="fb"><div class="n">~24</div><div class="t">Florida homes with the designation — yours could be among the very first</div></div>
+  </div>
+  <div class="fort-cols">
+    <div class="rv d1">
+      <h3 class="serif" style="font-size:26px;color:var(--ink);font-weight:600;margin-bottom:16px">What makes a roof FORTIFIED</h3>
+      <ul class="fort-how">
+        <li><span class="fn">i.</span><span><b>A sealed roof deck</b> — even if wind strips the covering, the sealed deck keeps most water out. This is the exact failure Pinellas saw 40,000 times in 2024.</span></li>
+        <li><span class="fn">ii.</span><span><b>Stronger attachment, engineered edges</b> — enhanced fastening and locked-down edges at the roof's most vulnerable points, stricter than code.</span></li>
+        <li><span class="fn">iii.</span><span><b>Independent verification</b> — an IBHS-certified evaluator (not us) inspects the work. Your certificate is proof, not promises.</span></li>
+        <li><span class="fn">iv.</span><span><b>Real leverage in Florida</b> — documents wind-mitigation features for insurance discounts; upgrades can qualify for My Safe Florida Home grants (up to $10,000) and PACE financing.</span></li>
+      </ul>
+    </div>
+    <div class="fort-edge rv d2">
+      <h3>Why this is the Smiths' edge</h3>
+      <p>When nearly every roof in Tyrone Garden Manor was built to minimum code, a FORTIFIED certificate makes yours <b>provably different</b> — to your insurer, to a future buyer, and to the next storm with a name.</p>
+      <p style="margin-bottom:0"><b>Almost no contractor in Tampa Bay offers this.</b> Arry's does — and we'll price the FORTIFIED upgrade alongside your metal roof proposal.</p>
+    </div>
+  </div>
+  <p class="fine rv d3">FORTIFIED® is a program of the Insurance Institute for Business &amp; Home Safety (IBHS). Claim figures from a 2025 peer-reviewed Hurricane Sally study; resale premium from a University of Alabama study. Florida designation count per IBHS data at time of preparation. Savings vary by carrier; grant eligibility subject to program rules.</p>
+</section>
+
+<!-- ============ 12 · SOLAR — Sunshine City ============ -->
+<section id="solar">
+  <div class="sun-badge rv">☀&nbsp; Our Solar Mission · The Sunshine City</div>
+  <h2 class="h-lg rv d1">The city that holds the world record for sunshine<br><span class="it gold">should get a power bill to match.</span></h2>
+  <div class="two-col" style="margin-top:16px">
+    <div>
+      <p class="lede rv d2">St. Petersburg once logged <strong>768 consecutive days of sunshine</strong> — a world record that still stands. Every one of those days, energy lands on your roof for free. As one of the few GAF factory-certified solar roofing contractors in Tampa Bay, Arry's installs <strong>GAF Energy solar roof systems</strong> designed into the roof itself — one contractor, one crew, one timeline.</p>
+      <ul class="sun-list rv d2">
+        <li><div class="dot">✦</div><span><b>Flashed with the roof, never nailed through it</b> — integrated solar eliminates the leak risk of bolt-on racks.</span></li>
+        <li><div class="dot">✦</div><span><b>Low-profile, high curb appeal</b> — sleek panels that complement the roofline.</span></li>
+        <li><div class="dot">✦</div><span><b>Watch it earn, hour by hour</b> — a companion app shows production by hour, day, month, or year.</span></li>
+        <li><div class="dot">✦</div><span><b>Shrink the utility bill</b> — generate your own power and unlock potential federal tax credits.</span></li>
+        <li><div class="dot">✦</div><span><b>One warranty covers it all</b> — the 25-year Golden Pledge® on a GAF Solar Energy System covers roofing, panels, <em>and</em> workmanship. Transferable if you sell.</span></li>
+      </ul>
+    </div>
+    <div class="solar-imgs rv d2">
+      <figure class="photo-card">
+        <img src="https://arrysroofing.com/wp-content/uploads/2024/09/Roof-render-pullback.jpg" alt="GAF Energy solar roof system by Arry's Roofing" loading="lazy">
+        <figcaption>GAF Energy solar roof · Designed into the roofline</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="https://arrysroofing.com/wp-content/uploads/2024/09/Solar-square-render-closeup.jpg" alt="Low-profile GAF solar roof panels close-up" loading="lazy">
+        <figcaption>Low-profile panels, flashed with the roof</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="solar-strip rv d3">
+    <p><b>Thinking about solar someday?</b> Do it when you re-roof — it's dramatically cheaper than adding it later, and on a standing-seam metal roof the panels clamp to the seams <b>without a single hole drilled</b>. Ask us to include a solar option in your proposal. No pressure — just the numbers, side by side.</p>
+    <a class="mini-btn" href="tel:7279389565">Ask About Solar</a>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ 13 · PROCESS + FAQ ============ -->
+<section id="process">
+  <div class="kick rv">Chapter Eleven · From handshake to final seam</div>
+  <h2 class="h-lg rv d1">A process as clean<br><span class="it gold">as the finished roofline.</span></h2>
+  <div class="steps-grid">
+    <div class="sg rv"><div class="n">1</div><h3>Free assessment</h3><p>We come to 59th Way N, measure the roof, evaluate structure and decking, and walk you through colors and profiles — no obligation.</p></div>
+    <div class="sg rv d1"><div class="n">2</div><h3>Transparent proposal</h3><p>One clear price. Materials, timeline, permits, and warranty in writing — plus projected insurance and energy savings.</p></div>
+    <div class="sg rv d2"><div class="n">3</div><h3>Precision install</h3><p>Our own crew completes most metal roofs in days — daily cleanup and a magnetic sweep of your yard included.</p></div>
+    <div class="sg rv d3"><div class="n">4</div><h3>Inspection &amp; protection</h3><p>Final walkthrough, wind-mitigation documentation for your insurer, and warranties registered in your name.</p></div>
+  </div>
+  <div class="faq rv d2">
+    <h3 class="faq-title serif">Questions your neighbors ask us</h3>
+    <details>
+      <summary>Is a metal roof worth the higher upfront cost?</summary>
+      <div class="a">Over its life, usually yes. One metal roof can outlast two to three shingle roofs while cutting cooling bills and often earning insurance credits. Ask us to walk through total cost of ownership — and about financing and payment options.</div>
+    </details>
+    <details>
+      <summary>How long does installation take?</summary>
+      <div class="a">Most residential metal re-roofs finish in a matter of days once materials arrive. We handle permits, protect landscaping, clean up daily, and finish with a magnetic sweep.</div>
+    </details>
+    <details>
+      <summary>Will it help with my homeowner's insurance?</summary>
+      <div class="a">In most cases, yes — and after 2024, Pinellas carriers scrutinize roofs harder than ever. A wind-rated metal system documented on Florida's wind-mitigation form frequently earns 15–35% premium credits. We provide the documentation.</div>
+    </details>
+    <details>
+      <summary>What maintenance does a metal roof need?</summary>
+      <div class="a">Very little — occasional visual checks and keeping debris out of valleys and gutters. No re-nailing, no granule loss, no curling.</div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ 14 · CTA ============ -->
+<section id="cta" class="dark">
+  <div class="inner">
+    <img class="logo-mark rv" src="arrys_logo.jpg" alt="Arry's Roofing gold A logo">
+    <div class="kick rv d1" style="display:inline-flex">One roof · Once · Done right</div>
+    <h2 class="h-xl rv d1">Before the next named storm<br>learns your address —<br><span class="gold">call your neighbors first.</span></h2>
+    <p class="lede rv d2" style="margin-left:auto;margin-right:auto;text-align:center">Mr. &amp; Mrs. Smith — schedule your free assessment for <strong>2044 59th Way N</strong> and get a personalized quote with projected insurance savings, energy savings, and your warranty options, before storm season peaks.</p>
+    <div class="rv d3">
+      <a class="btn" href="tel:7279389565">Call (727) 938-9565</a>
+      <a class="btn alt" href="https://arrysroofing.com" target="_blank" rel="noopener">arrysroofing.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">
+    <img src="arrys_logo.jpg" alt="Arry's Roofing logo">
+    <div>© <span id="yr"></span> Arry's Roofing Services, Inc. · 401 E Spruce St, Tarpon Springs, FL · Serving Tampa Bay since 1990<br>Roofing Lic. CCC1326986 · General Contractor Lic. CGC1525413</div>
+  </div>
+  <div>Prepared exclusively for Mr. &amp; Mrs. Smith · Tyrone Garden Manor · St. Petersburg, FL</div>
+</footer>
+
+<div id="lb"><span class="x">×</span><img src="" alt=""><figcaption></figcaption></div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const prog = document.getElementById('prog');
+  addEventListener('scroll', () => {
+    const h = document.documentElement;
+    prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+  }, { passive: true });
+
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+  }), { threshold: .16 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  const co = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, target = +el.dataset.count;
+    co.unobserve(el);
+    const node = [...el.childNodes].find(n => n.nodeType === 3 && n.textContent.trim() !== '');
+    const t0 = performance.now(), dur = 1800;
+    (function tick(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      node.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString();
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }), { threshold: .5 });
+  document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+
+  const dots = document.querySelectorAll('#dots a');
+  const secs = [...document.querySelectorAll('section')];
+  const so = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const i = secs.indexOf(e.target);
+    dots.forEach((d, j) => d.classList.toggle('act', i === j));
+  }), { threshold: .35 });
+  secs.forEach(s => so.observe(s));
+
+  document.querySelectorAll('.strip img, .photo-card img').forEach(img => {
+    if (img.complete && img.naturalWidth) img.classList.add('ld');
+    else img.addEventListener('load', () => img.classList.add('ld'));
+  });
+
+  const lb = document.getElementById('lb');
+  const lbImg = lb.querySelector('img');
+  const lbCap = lb.querySelector('figcaption');
+  document.querySelectorAll('.strip figure, .photo-card').forEach(f => f.addEventListener('click', () => {
+    lbImg.src = f.querySelector('img').src;
+    lbCap.textContent = (f.querySelector('figcaption') || {}).textContent || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }));
+  const closeLb = () => { lb.classList.remove('open'); document.body.style.overflow = ''; };
+  lb.addEventListener('click', closeLb);
+  addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+</script>
+</body>
+</html>
