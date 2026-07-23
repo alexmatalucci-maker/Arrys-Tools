@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arry's Roofing — Roofing Guides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#141109;--gold:#c9a227;--gold-deep:#9a7718;--gold-bright:#e8c04a;--gold-pale:#f3e3ae;
+    --cream:#f8f3e7;--card:#fffef8;--ink:#1e1a12;--ink-soft:#655e4d;--ivory:#f5f1e6;--muted:#9b958a;
+    --bay:#1e6e7e;--terra:#b5502f;--sun:#e0932c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:radial-gradient(1100px 620px at 50% -8%, rgba(201,162,39,.14), transparent 60%),var(--cream);
+    color:var(--ink);font-family:'Figtree',system-ui,sans-serif;font-weight:300;line-height:1.7;min-height:100vh}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif}
+
+  header{display:flex;align-items:center;gap:14px;padding:14px 8vw;background:var(--black);border-bottom:1px solid rgba(201,162,39,.35)}
+  header img{width:44px;height:44px;border-radius:8px;box-shadow:0 0 12px rgba(201,162,39,.35)}
+  header .brand{font-family:'Fraunces',serif;font-size:21px;color:var(--ivory)}
+  header .brand b{color:var(--gold-bright);font-weight:600}
+  header .tag{margin-left:auto;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+  @media(max-width:600px){header .tag{display:none}}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:56px 8vw 80px}
+  .kick{display:inline-flex;align-items:center;gap:13px;font-size:10.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px}
+  .kick::before,.kick::after{content:"";width:30px;height:1.2px;background:var(--gold-deep)}
+  .lead h1{font-size:clamp(32px,4.4vw,52px);font-weight:500;line-height:1.14;color:var(--ink)}
+  .lead h1 span{font-style:italic;color:var(--gold-deep)}
+  .lead p{max-width:600px;margin-top:16px;color:var(--ink-soft);font-size:16px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:44px}
+  .card{background:var(--card);border:1.3px solid rgba(154,119,24,.32);border-radius:16px;overflow:hidden;
+    display:flex;flex-direction:column;box-shadow:0 16px 40px rgba(30,26,18,.12);transition:transform .3s,box-shadow .3s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 26px 56px rgba(30,26,18,.2)}
+  .card .top{height:5px}
+  .card.shingle .top{background:var(--gold)}
+  .card.metal .top{background:var(--bay)}
+  .card.tile .top{background:var(--terra)}
+  .card.solar .top{background:linear-gradient(90deg,var(--sun),var(--gold-bright))}
+  .card.fortified .top{background:#34506b}
+  .card .body{padding:26px 24px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;flex:1}
+  .card h3{font-size:22px;font-weight:600;color:var(--ink)}
+  .card .sub{font-size:12px;letter-spacing:.06em;color:var(--ink-soft);margin:4px 0 20px}
+
+  .qrbox{width:186px;height:186px;background:#fff;border:1px solid rgba(154,119,24,.3);border-radius:12px;
+    padding:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(30,26,18,.1)}
+  .qrbox img{width:100%;height:100%;object-fit:contain;display:block}
+  .qr-missing{display:none;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;height:100%;
+    border:2px dashed rgba(154,119,24,.5);border-radius:8px;color:var(--gold-deep);font-size:11px;letter-spacing:.08em;text-align:center;padding:10px}
+  .qr-missing b{font-size:22px;line-height:1}
+  .qrhint{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:12px 0 18px}
+
+  .btn{margin-top:auto;width:100%;text-align:center;text-decoration:none;font-weight:600;font-size:13.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--gold-bright);background:var(--black);border:1.4px solid var(--gold);
+    padding:14px 16px;border-radius:10px;transition:.25s}
+  .btn:hover{background:var(--gold-deep);color:#fff}
+
+  footer{padding:30px 8vw;background:var(--black);color:#8a8478;font-size:11.5px;display:flex;align-items:center;gap:12px;
+    flex-wrap:wrap;border-top:1px solid rgba(201,162,39,.3)}
+  footer img{width:30px;height:30px;border-radius:6px}
+
+  @media print{
+    body{background:#fff}
+    header .tag,.lead p,.kick,footer,.btn{display:none}
+    .grid{grid-template-columns:repeat(2,1fr);gap:14px}
+    .card{border:1px solid #ccc;box-shadow:none;break-inside:avoid;page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="arrys_logo.jpg" alt="Arry's Roofing logo">
+  <div class="brand"><b>ARRY'S</b> ROOFING</div>
+  <div class="tag">Roofing Guides</div>
+</header>
+
+<div class="wrap">
+  <div class="lead">
+    <div class="kick">Scan · or tap to learn</div>
+    <h1>Explore your <span>roofing options.</span></h1>
+    <p>Scan a code with your phone camera, or tap <strong>View Information</strong> to open a quick guide on each type of roof — the materials, the colors, and how each one performs.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- SHINGLE -->
+    <div class="card shingle">
+      <div class="top"></div>
+      <div class="body">
+        <h3>Shingle Roofing</h3>
+        <div class="sub">Asphalt shingle systems</div>
+        <div class="qrbox">
+          <img src="data:image/png;base64,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" alt="QR code — Shingle Roofing guide"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-missing"><b>QR</b>Add<br>qr-shingle.png</div>
+        </div>
+        <div class="qrhint">Scan to open</div>
+        <a class="btn" href="https://alexmatalucci-maker.github.io/Arrys-Tools/shingle-roof.html">View Information &rarr;</a>
+      </div>
+    </div>
+
+    <!-- METAL -->
+    <div class="card metal">
+      <div class="top"></div>
+      <div class="body">
+        <h3>Metal Roofing</h3>
+        <div class="sub">Standing seam &amp; metal systems</div>
+        <div class="qrbox">
+          <img src="data:image/png;base64,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" alt="QR code — Metal Roofing guide"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-missing"><b>QR</b>Add<br>qr-metal.png</div>
+        </div>
+        <div class="qrhint">Scan to open</div>
+        <a class="btn" href="https://alexmatalucci-maker.github.io/Arrys-Tools/metal-roof.html">View Information &rarr;</a>
+      </div>
+    </div>
+
+    <!-- TILE -->
+    <div class="card tile">
+      <div class="top"></div>
+      <div class="body">
+        <h3>Tile Roofing</h3>
+        <div class="sub">Clay &amp; concrete tile</div>
+        <div class="qrbox">
+          <img src="data:image/png;base64,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" alt="QR code — Tile Roofing guide"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-missing"><b>QR</b>Add<br>qr-tile.png</div>
+        </div>
+        <div class="qrhint">Scan to open</div>
+        <a class="btn" href="https://alexmatalucci-maker.github.io/Arrys-Tools/tile-roof.html">View Information &rarr;</a>
+      </div>
+    </div>
+
+    <!-- SOLAR -->
+    <div class="card solar">
+      <div class="top"></div>
+      <div class="body">
+        <h3>Solar Roofing</h3>
+        <div class="sub">Solar shingles &amp; panels</div>
+        <div class="qrbox">
+          <img src="data:image/png;base64,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" alt="QR code — Solar Roofing guide"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-missing"><b>QR</b>Add<br>qr-solar.png</div>
+        </div>
+        <div class="qrhint">Scan to open</div>
+        <a class="btn" href="https://alexmatalucci-maker.github.io/Arrys-Tools/solar-roof.html">View Information &rarr;</a>
+      </div>
+    </div>
+
+    <!-- FORTIFIED -->
+    <div class="card fortified">
+      <div class="top"></div>
+      <div class="body">
+        <h3>FORTIFIED&trade; Roof</h3>
+        <div class="sub">Storm-rated · wind mitigation</div>
+        <div class="qrbox">
+          <img src="data:image/png;base64,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" alt="QR code — FORTIFIED Roof guide"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-missing"><b>QR</b>Add<br>qr-fortified.png</div>
+        </div>
+        <div class="qrhint">Scan to open</div>
+        <a class="btn" href="https://alexmatalucci-maker.github.io/Arrys-Tools/fortified.html">View Information &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <img src="arrys_logo.jpg" alt="Arry's Roofing logo">
+  <div>© <span id="yr"></span> Arry's Roofing Services, Inc. · Serving Tampa Bay · Roofing guides for homeowners</div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
