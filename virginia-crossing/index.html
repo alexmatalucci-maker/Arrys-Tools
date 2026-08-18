@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Twelve years on. &middot; Arry's Roofing</title>
+<title>Community Roof Wellness Inspections. &middot; Arry's Roofing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -59,6 +59,19 @@
   .h3{font-weight:700;font-size:20px;line-height:1.25;letter-spacing:-.01em}
   .sub{font-family:var(--serif);font-style:italic;font-weight:500;
     font-size:clamp(19px,2.4vw,24px);line-height:1.25;color:var(--gold-dark);margin-top:var(--space-3)}
+  /* A subhead standing on its own rather than sitting under a headline —
+     centred and measured, so it reads as a line addressed to the reader
+     instead of the opening of a paragraph. */
+  .sub.ctr{text-align:center;max-width:58ch;margin-left:auto;margin-right:auto}
+  /* The closing line of a section. Sans, not the Playfair italic used for
+     subheads — a practical instruction with a phone number in it reads wrong
+     set in italic serif, the digits especially. Generous space above so it
+     detaches from whatever it follows and reads as the sign-off. */
+  .closer{font-family:var(--sans);font-style:normal;font-weight:500;
+    font-size:clamp(14.5px,1.45vw,16.5px);line-height:1.65;letter-spacing:.005em;
+    text-align:center;max-width:54ch;margin:var(--space-16) auto 0;color:var(--charcoal)}
+  .dark .closer{color:var(--cream-pale)}
+  @media(max-width:720px){.closer{margin-top:var(--space-12)}}
   .body{font-size:14px;line-height:1.5;color:var(--charcoal);max-width:66ch;margin-top:var(--space-6)}
   .body strong{font-weight:700;color:var(--black)}
   .body + .body{margin-top:var(--space-4)}
@@ -308,6 +321,9 @@
   .shot{margin-top:var(--space-12);border-radius:var(--radius-md);overflow:hidden;
     background:var(--black);box-shadow:var(--shadow-lg)}
   .shot img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+  /* A straight-down aerial is 4:3 out of the drone, and cropping it to 16:9
+     throws away the two rows of roofs that make the shot worth showing. */
+  .shot.tall img{aspect-ratio:4/3}
   .shot figcaption{padding:var(--space-3) var(--space-6);
     font-weight:700;font-size:10px;letter-spacing:.28em;text-transform:uppercase;
     color:var(--gold);background:var(--black)}
@@ -496,6 +512,9 @@
   .mediablock{display:grid;grid-template-columns:1.15fr 1fr;gap:var(--space-8);
     margin-top:var(--space-12);align-items:start}
   @media(max-width:820px){.mediablock{grid-template-columns:1fr;gap:var(--space-6)}}
+  /* No facts beside it: one column at a readable measure, not full bleed. A
+     section that is only a film should still sit inside the page's rhythm. */
+  .mediablock.solo{grid-template-columns:1fr;max-width:860px;margin-left:auto;margin-right:auto}
   .mediablock .vid{background:var(--black);border-radius:var(--radius-md);overflow:hidden;
     box-shadow:var(--shadow-lg)}
   .mediablock .vid video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:var(--black)}
@@ -740,31 +759,22 @@
     <div class="inner">
       <div class="seal"><img src="data:image/png;base64,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" alt="Arry's seal"></div>
       <div class="to">A notice to residents &middot; Please read</div>
-      <h1>Twelve years on.</h1>
+      <h1>Community Roof Wellness Inspections.</h1>
       <div class="addr">Virginia Crossing &middot; Dunedin, FL 34698</div>
-      <p class="body">Arry's Roofing replaced every roof in this community twelve years ago. Over the coming weeks you may see one of our estimators on your street with a ladder. Nothing has gone wrong at your home.</p><p class="body">One roof here was shedding granules. We inspected it, documented what we found, and GAF approved a full replacement under the Golden Pledge warranty — at no cost to the owner. We are now checking the buildings closest to it for the same defect.</p>
+      <p class="body">Arry's Roofing replaced every roof in this community. Over the coming weeks you may see a few of our inspectors looking at the roofs.</p>
       <div class="sig">
         <div class="name">&mdash; Arry's Roofing Services</div>
-        <div class="role">Family roofers of Tampa Bay since 1990</div>
+        <div class="role">Serving Tampa Bay since 1990</div>
       </div>
     </div>
   </div>
-</section><section id="context" class="dark">
-  <div class="wrap">
-    <div class="rail rv"><span>0 2 &middot; Why We're Back</span><span class="mid">&middot;</span><span class="t2">Dunedin, Florida</span></div>
-    <h1 class="h1 rv d1">Somebody mentioned grit in a gutter.</h1>
-    <p class="sub rv d1">That turned out to be enough.</p>
-    <p class="body rv d2">Nothing was leaking and no claim had been filed. A homeowner noticed grit collecting where the water runs off and said so. We went up, photographed it and took it to GAF, who approved a replacement roof under the Golden Pledge warranty. That owner paid nothing.</p><p class="body rv d2">Arry's Roofing Services was started and run by Arry and Becky Housh. Their sons Stephen and Matthew joined the management team, and the four of them run it today from one office on East Spruce Street in Tarpon Springs. Coming back to a community we roofed twelve years ago is a short drive, not a favour.</p><p class="body rv d2">Golden Pledge is issued only through GAF factory-certified contractors, and it is the one GAF warranty covering workmanship as well as materials. Arry's holds that certification, which is what lets us file on your behalf instead of leaving you to argue with a manufacturer alone.</p>
-    
-    <div class="pull rv d3">Nobody called us about a leak. Somebody mentioned grit in a gutter.<span class="attr">Arry's Roofing Services, Inc.</span></div>
-  </div>
 </section><section id="media">
   <div class="wrap">
-    <div class="rail rv"><span>0 3 &middot; From The Air</span><span class="mid">&middot;</span><span class="t2">11 January 2025</span></div>
-    <h1 class="h1 rv d1">Every roof in shot went on the same week.</h1>
-    <p class="sub rv d1">Same crews, same production run.</p>
-    <p class="body rv d2">Which is exactly why one roof having a manufacturing defect is worth checking the ones around it. Twelve seconds, no sound.</p>
-    <div class="mediablock rv d2">
+    <div class="rail rv"><span>0 2 &middot; From The Air</span><span class="mid">&middot;</span><span class="t2">Virginia Crossing</span></div>
+    
+    
+    
+    <div class="mediablock solo rv d2">
       <div class="vid">
         <video controls preload="metadata" playsinline muted poster="media/vc-poster.jpg">
           <source src="media/vc-flyover.mp4" type="video/mp4">
@@ -772,61 +782,19 @@
         <div class="vcap"><span>Virginia Crossing &middot; aerial survey</span>
           <span class="t2">12 sec &middot; no sound</span></div>
       </div>
-      <dl><div class="mrow"><dt>Captured</dt><dd>11 January 2025, 09:44</dd></div><div class="mrow"><dt>Equipment</dt><dd>DJI aerial survey, flown at 22–70 m</dd></div><div class="mrow"><dt>Covered</dt><dd>The cul-de-sac and the buildings adjacent to the approved claim</dd></div><div class="mrow"><dt>Roofs in view</dt><dd>All installed by Arry's, all at the same time, twelve years ago</dd></div><div class="mrow"><dt>Cost to you</dt><dd>Nothing. There is no charge for the survey or for filing a claim</dd></div></dl>
+      
     </div>
-  </div>
-</section><section id="findings" class="dark">
-  <div class="wrap">
-    <div class="rail rv"><span>0 4 &middot; The Inspection</span><span class="mid">&middot;</span><span class="t2">GAF Golden Pledge</span></div>
-    <h1 class="h1 rv d1">What we're looking for.</h1>
-    <p class="sub rv d1">Two signs did most of the work on the first roof.</p>
-    <p class="body rv d2">None of this is visible from the ground, which is the whole reason somebody has to go up. Every roof we walk is photographed and written up, whether we find anything or not.</p>
-    <ol class="cardstack rv d2"><li><span class="num">0 1</span><h3>Granules washing off the shingle, and collecting in the gutters.</h3><p>Granules are the shingle's sunscreen. Once enough have gone, Florida sun reaches the asphalt underneath.</p></li><li><span class="num">0 2</span><h3>Shingle edges curling up and drying out.</h3><p>The mat underneath is losing its flexibility. It lifts the tab off the one below and lets wind and driven rain in.</p></li><li><span class="num">0 3</span><h3>Gutter troughs packed with debris and sediment.</h3><p>Water that cannot leave the gutter backs up under the drip edge and finds the fascia.</p></li><li><span class="num">0 4</span><h3>Rust breaking through vent collars.</h3><p>Those penetrations seal at the flange. Rust perforation puts water into the attic, not onto the roof.</p></li><li><span class="num">0 5</span><h3>Sealant over a split instead of a replacement.</h3><p>Mastic has a shelf life. Whatever movement opened the split will open it again.</p></li></ol>
-  </div>
-</section><section id="coverage">
-  <div class="wrap">
-    <div class="rail rv"><span>0 5 &middot; The Warranty</span><span class="mid">&middot;</span><span class="t2">GAF Golden Pledge</span></div>
-    <h1 class="h1 rv d1">You are owed more than you think.</h1>
-    <p class="sub rv d1">Golden Pledge is not the ordinary shingle warranty.</p>
-    <p class="body rv d2">Most roofing warranties cover the material and stop there — and GAF's own figures put more than two-thirds of new-roof problems down to workmanship rather than materials. Golden Pledge was the first to cover both.</p>
-    <div class="spectable rv d2"><div class="sh">What Golden Pledge covers</div><dl><div class="srow"><dt>Materials</dt><dd>Covered, plus 100% replacement during the SmartChoice Protection Period on covered components</dd></div><div class="srow"><dt>Workmanship</dt><dd>Covered by GAF — <b>not</b> left with the contractor who installed the roof</dd></div><div class="srow"><dt>Labour</dt><dd class="hi">The reasonable cost of installing them is included, not just the materials</dd></div><div class="srow"><dt>Who can file</dt><dd class="hi">GAF factory-certified contractors only, which is why this is not a form you fill in yourself</dd></div><div class="srow"><dt>If you sell</dt><dd>Transfers once to the next owner, who must notify GAF within 60 days</dd></div><div class="srow"><dt>Cost to you</dt><dd>Nothing, for the inspection or for preparing a claim</dd></div></dl></div>
-    
-    <p class="body rv d3">Summarised from GAF's published terms. Your registered warranty document governs, and we will confirm the exact terms recorded for your building as part of the inspection.</p>
-  </div>
-</section><section id="ledger" class="dark">
-  <div class="wrap">
-    <div class="rail rv"><span>0 6 &middot; Now Or Later</span><span class="mid">&middot;</span><span class="t2">The same roof, either way</span></div>
-    <h1 class="h1 rv d1">One defect. Two very different bills.</h1>
-    <p class="sub rv d1">Nothing about the roof changes. Only the date does.</p>
-    
-    <div class="ledger rv d2"><div class="col now"><div class="ch">Found while coverage is live</div><div class="ct">The manufacturer's problem.</div><ul><li>GAF pays for the replacement materials <b>and the labour</b> to install them.</li><li>No special assessment for a defect that was somebody else's to begin with.</li><li>Your building ends up with a <b>dated, photographed condition file</b> — the document that answers questions later.</li><li>Florida carriers look harder at roofs from around fifteen years on, and a current inspection is the documentation they ask for. <b>These roofs are twelve.</b></li></ul></div><div class="col"><div class="ch">Found after it lapses</div><div class="ct">Yours.</div><ul><li>The identical defect, now quoted as ordinary replacement work.</li><li>Materials <b>and</b> labour both fall to the association or the owner.</li><li>A special assessment, spread across households that had no say in when it was found.</li><li>Nothing to show a carrier, a buyer or an inspector except the roof's age.</li></ul></div></div>
-    <p class="body rv d3">One honest caveat: we cannot know which buildings carry the defect until we look. That is what the inspection is for, and it is why nobody is being asked to decide anything yet.</p>
-  </div>
-</section><section id="pair">
-  <div class="wrap">
-    <div class="rail rv"><span>0 7 &middot; Now, And After</span><span class="mid">&middot;</span><span class="t2">Both shot from directly above</span></div>
-    <h1 class="h1 rv d1">What a claim actually gets you.</h1>
-    <p class="sub rv d1">The same view, twelve years apart.</p>
-    <p class="body rv d2">Left is Virginia Crossing in January. Right is a roof we finished for another Tampa Bay homeowner, photographed the same way. If a defect on your building qualifies, this is the outcome — paid for by the manufacturer rather than by the association.</p>
-    <div class="pair rv d2"><figure><div class="fr"><img src="media/vc-overhead.jpg" alt="Virginia Crossing roofs photographed from directly overhead" loading="lazy"><div class="tag">Now</div></div><figcaption><h3>Virginia Crossing, from 70 metres.</h3><p>Twelve years of Florida sun. The same roof repeated down the street — which is exactly why one defective one is worth checking the rest.</p><div class="meta">11 Jan 2025 &middot; 09:46 &middot; 70 m</div></figcaption></figure><figure class="after"><div class="fr"><img src="https://arrysroofing.com/wp-content/uploads/2024/09/Shingle15.jpg" alt="A completed Arry's Roofing shingle roof from above" loading="lazy"><div class="tag">After</div></div><figcaption><h3>A roof we finished, same angle.</h3><p>New architectural shingle in the same warm range. Clean courses, sharp hips, full granule coverage — and the warranty clock starts again.</p><div class="meta">Arry's Roofing &middot; our own work</div></figcaption></figure></div>
-    <p class="body rv d3">This is illustrative of our shingle work, not a rendering of your building. What goes on any roof here depends on what the inspection finds and what GAF approves.</p>
   </div>
 </section><section id="inspectors" class="dark">
   <div class="wrap">
-    <div class="rail rv"><span>0 8 &middot; Who Is Coming</span><span class="mid">&middot;</span><span class="t2">One or two people, not a crew</span></div>
-    <h1 class="h1 rv d1">You'll see one of these two.</h1>
-    <p class="sub rv d1">An estimator and a ladder. No crew, no trucks, no tear-off.</p>
-    <p class="body rv d2">This is an inspection, not roofing work. One of our estimators arrives, sets a ladder against the eave, walks the roof, photographs it and leaves. Either of them will take your call first if you would rather.</p>
-    <ul class="people rv d2"><li class="person"><div class="ph"><span class="ini">TB</span></div><div><div class="nm">Tyler Burke</div><div class="rl">Estimator &middot; Arry's Roofing</div><p>Walking the roofs here and preparing the condition reports that go back to your board.</p><a class="tel" href="tel:+17272795001">(727) 279-5001</a></div></li><li class="person"><div class="ph"><span class="ini">SF</span></div><div><div class="nm">Sharief Ferris</div><div class="rl">Commercial &amp; Residential &middot; Arry's Roofing</div><p>Handling the GAF Golden Pledge claim on the approved building and coordinating with your property manager.</p><a class="tel" href="tel:+17273097332">727-309-7332</a></div></li></ul>
-  </div>
-</section><section id="next-steps">
-  <div class="wrap">
-    <div class="rail rv"><span>0 9 &middot; What Happens Next</span><span class="mid">&middot;</span><span class="t2">Virginia Crossing</span></div>
-    <h1 class="h1 rv d1">What happens, in order.</h1>
-    <p class="sub rv d1">Six steps, and most don't involve you.</p>
-    <p class="body rv d2">Your property manager holds the schedule. Nothing below happens without a date going out first.</p>
-    <ol class="timeline rv d2"><li><span class="num">0 1</span><h3>A date goes out through the HOA.</h3><p>You will know which day before anyone arrives. We work around community events and holidays.</p></li><li><span class="num">0 2</span><h3>One estimator arrives with a ladder.</h3><p>No crew, no trucks, no debris. Outside only, and nothing left behind.</p></li><li><span class="num">0 3</span><h3>Twenty to thirty minutes on the roof.</h3><p>Walked and photographed. Every roof gets the same treatment whether we find anything or not.</p></li><li><span class="num">0 4</span><h3>A condition report goes to the board.</h3><p>Timestamped photographs and a plain-English note. Ask your property manager for yours.</p></li><li><span class="num">0 5</span><h3>Anything qualifying goes to GAF.</h3><p>Arry's prepares and carries the submission. It costs the owner nothing and requires nothing from you.</p></li><li><span class="num">0 6</span><h3>We stop where the evidence stops.</h3><p>This begins next to the approved claim and expands only if the inspections justify it.</p></li></ol>
-    <p class="body rv d3">Questions before we arrive? Call Arry's Roofing on (727) 279-5001, or reach Sharief directly on 727-309-7332. There is no charge for the inspection, no obligation attached to it, and no sales visit that follows it.</p>
+    <div class="rail rv"><span>0 3 &middot; Who Is Coming</span><span class="mid">&middot;</span><span class="t2">Two estimators, not a crew</span></div>
+    
+    
+    <ul class="people rv d1"><li class="person"><div class="ph"><span class="ini">TB</span></div><div><div class="nm">Tyler Burke</div><div class="rl">Commercial &amp; Residential &middot; Arry's Roofing</div><p>Walking the roofs here and preparing the condition report for each home.</p></div></li><li class="person"><div class="ph"><span class="ini">SF</span></div><div><div class="nm">Sharief Ferris</div><div class="rl">Commercial &amp; Residential &middot; Arry's Roofing</div><p>Coordinating the schedule with your property manager and handling the GAF side.</p></div></li></ul>
+    
+    
+    <figure class="shot tall rv d2"><img src="media/vc-overhead.jpg" alt="Virginia Crossing photographed from directly overhead" loading="lazy"><figcaption>Virginia Crossing from 70 metres &middot; 8/16/2026</figcaption></figure>
+    <p class="closer rv d3">Questions before we arrive? Call Arry's Roofing on (727) 279-5001. There is no charge for the wellness inspection.</p>
   </div>
 </section>
 
